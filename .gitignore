@@ -50,5 +50,8 @@ cmake-build-debug-visual-studio/
 vcpkg/
 vcpkg_installed/
 
-# dependencies
-deps/
+# submodule dependencies
+deps/glfw/
+deps/glm/
+deps/imgui/
+deps/stb/
