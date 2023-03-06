@@ -39,6 +39,19 @@ target_sources(${PROJECT_NAME} PRIVATE
 # STB
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/deps/stb)
 
-# Vulkan
+# GLAD
+add_subdirectory(deps/glad)
+target_link_libraries(${PROJECT_NAME} glad)
+
+# OpenGL
 find_package(OpenGL REQUIRED)
 target_link_libraries(${PROJECT_NAME} opengl32)
+
+# Our libraries
+add_subdirectory(src/core)
+target_link_libraries(${PROJECT_NAME} core)
+target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src/core")
+
+add_subdirectory(src/application)
+target_link_libraries(${PROJECT_NAME} application)
+target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src/application")

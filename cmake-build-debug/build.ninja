@@ -47,61 +47,61 @@ cmake_ninja_workdir = E$:/open_gl_examples/cmake-build-debug/
 #############################################
 # Order-only phony target for OpenGL
 
-build cmake_object_order_depends_target_OpenGL: phony || cmake_object_order_depends_target_glfw
+build cmake_object_order_depends_target_OpenGL: phony || cmake_object_order_depends_target_application cmake_object_order_depends_target_core cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
 
 build CMakeFiles/OpenGL.dir/src/main.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/src/main.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\src\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\src
 
 build CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\backends\imgui_impl_glfw.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui\backends
 
 build CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\backends\imgui_impl_opengl3.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui\backends
 
 build CMakeFiles/OpenGL.dir/deps/imgui/imgui.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/imgui.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\imgui.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui
 
 build CMakeFiles/OpenGL.dir/deps/imgui/imgui_draw.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/imgui_draw.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\imgui_draw.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui
 
 build CMakeFiles/OpenGL.dir/deps/imgui/imgui_demo.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/imgui_demo.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\imgui_demo.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui
 
 build CMakeFiles/OpenGL.dir/deps/imgui/imgui_tables.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/imgui_tables.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\imgui_tables.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui
 
 build CMakeFiles/OpenGL.dir/deps/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__OpenGL_Debug E$:/open_gl_examples/deps/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_OpenGL
   DEP_FILE = CMakeFiles\OpenGL.dir\deps\imgui\imgui_widgets.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=c++17
-  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/stb -IE:/open_gl_examples/src/core -IE:/open_gl_examples/src/application -IE:/open_gl_examples/deps/glfw/include -IE:/open_gl_examples/deps/glm -IE:/open_gl_examples/deps/glad/include
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OpenGL.dir\deps\imgui
 
@@ -113,9 +113,9 @@ build CMakeFiles/OpenGL.dir/deps/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__Open
 #############################################
 # Link the executable OpenGL.exe
 
-build OpenGL.exe: CXX_EXECUTABLE_LINKER__OpenGL_Debug CMakeFiles/OpenGL.dir/src/main.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_draw.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_demo.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_tables.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_widgets.cpp.obj | deps/glfw/src/libglfw3.a || deps/glfw/src/libglfw3.a
+build OpenGL.exe: CXX_EXECUTABLE_LINKER__OpenGL_Debug CMakeFiles/OpenGL.dir/src/main.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_draw.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_demo.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_tables.cpp.obj CMakeFiles/OpenGL.dir/deps/imgui/imgui_widgets.cpp.obj | deps/glfw/src/libglfw3.a deps/glad/libglad.a src/core/libcore.a src/application/libapplication.a deps/glfw/src/libglfw3.a src/core/libcore.a || deps/glad/libglad.a deps/glfw/src/libglfw3.a src/application/libapplication.a src/core/libcore.a
   FLAGS = -g
-  LINK_LIBRARIES = deps/glfw/src/libglfw3.a  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = deps/glfw/src/libglfw3.a  deps/glad/libglad.a  -lopengl32  src/core/libcore.a  src/application/libapplication.a  deps/glfw/src/libglfw3.a  src/core/libcore.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\OpenGL.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -689,11 +689,329 @@ build deps/glm/glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND deps/glm/glm/al
 build deps/glm/glm/install/strip: phony deps/glm/glm/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/open_gl_examples/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || deps/glad/CMakeFiles/glad.dir
+
+build deps/glad/CMakeFiles/glad.dir/src/gl.c.obj: C_COMPILER__glad_Debug E$:/open_gl_examples/deps/glad/src/gl.c || cmake_object_order_depends_target_glad
+  DEP_FILE = deps\glad\CMakeFiles\glad.dir\src\gl.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/deps/glad/include
+  OBJECT_DIR = deps\glad\CMakeFiles\glad.dir
+  OBJECT_FILE_DIR = deps\glad\CMakeFiles\glad.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library deps\glad\libglad.a
+
+build deps/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug deps/glad/CMakeFiles/glad.dir/src/gl.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = deps\glad\CMakeFiles\glad.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = deps\glad\libglad.a
+  TARGET_PDB = glad.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build deps/glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\deps\glad && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build deps/glad/edit_cache: phony deps/glad/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build deps/glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\deps\glad && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\open_gl_examples -BE:\open_gl_examples\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build deps/glad/rebuild_cache: phony deps/glad/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build deps/glad/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build deps/glad/CMakeFiles/install.util: CUSTOM_COMMAND deps/glad/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\deps\glad && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build deps/glad/install: phony deps/glad/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build deps/glad/CMakeFiles/install/local.util: CUSTOM_COMMAND deps/glad/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\deps\glad && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build deps/glad/install/local: phony deps/glad/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build deps/glad/CMakeFiles/install/strip.util: CUSTOM_COMMAND deps/glad/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\deps\glad && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build deps/glad/install/strip: phony deps/glad/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/open_gl_examples/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Order-only phony target for core
+
+build cmake_object_order_depends_target_core: phony || src/core/CMakeFiles/core.dir
+
+build src/core/CMakeFiles/core.dir/file_system.cpp.obj: CXX_COMPILER__core_Debug E$:/open_gl_examples/src/core/file_system.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = src\core\CMakeFiles\core.dir\file_system.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=c++17
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends
+  OBJECT_DIR = src\core\CMakeFiles\core.dir
+  OBJECT_FILE_DIR = src\core\CMakeFiles\core.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Link the static library src\core\libcore.a
+
+build src/core/libcore.a: CXX_STATIC_LIBRARY_LINKER__core_Debug src/core/CMakeFiles/core.dir/file_system.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src\core\CMakeFiles\core.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = src\core\libcore.a
+  TARGET_PDB = core.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/core/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\core && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/core/edit_cache: phony src/core/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/core/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\core && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\open_gl_examples -BE:\open_gl_examples\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/core/rebuild_cache: phony src/core/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/core/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/core/CMakeFiles/install.util: CUSTOM_COMMAND src/core/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\core && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/core/install: phony src/core/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/core/CMakeFiles/install/local.util: CUSTOM_COMMAND src/core/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\core && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/core/install/local: phony src/core/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/core/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/core/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\core && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/core/install/strip: phony src/core/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/open_gl_examples/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target application
+
+
+#############################################
+# Order-only phony target for application
+
+build cmake_object_order_depends_target_application: phony || cmake_object_order_depends_target_core cmake_object_order_depends_target_glfw
+
+build src/application/CMakeFiles/application.dir/window.cpp.obj: CXX_COMPILER__application_Debug E$:/open_gl_examples/src/application/window.cpp || cmake_object_order_depends_target_application
+  DEP_FILE = src\application\CMakeFiles\application.dir\window.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=c++17
+  INCLUDES = -IE:/open_gl_examples/deps/imgui -IE:/open_gl_examples/deps/imgui/backends -IE:/open_gl_examples/src/core -IE:/open_gl_examples/deps/glfw/include
+  OBJECT_DIR = src\application\CMakeFiles\application.dir
+  OBJECT_FILE_DIR = src\application\CMakeFiles\application.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target application
+
+
+#############################################
+# Link the static library src\application\libapplication.a
+
+build src/application/libapplication.a: CXX_STATIC_LIBRARY_LINKER__application_Debug src/application/CMakeFiles/application.dir/window.cpp.obj || deps/glfw/src/libglfw3.a src/core/libcore.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src\application\CMakeFiles\application.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = src\application\libapplication.a
+  TARGET_PDB = application.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/application/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\application && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/application/edit_cache: phony src/application/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/application/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\application && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\open_gl_examples -BE:\open_gl_examples\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/application/rebuild_cache: phony src/application/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/application/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/application/CMakeFiles/install.util: CUSTOM_COMMAND src/application/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\application && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/application/install: phony src/application/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/application/CMakeFiles/install/local.util: CUSTOM_COMMAND src/application/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\application && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/application/install/local: phony src/application/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/application/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/application/all
+  COMMAND = cmd.exe /C "cd /D E:\open_gl_examples\cmake-build-debug\src\application && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/application/install/strip: phony src/application/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build OpenGL: phony OpenGL.exe
 
+build application: phony src/application/libapplication.a
+
+build core: phony src/core/libcore.a
+
+build glad: phony deps/glad/libglad.a
+
 build glfw: phony deps/glfw/src/libglfw3.a
+
+build libapplication.a: phony src/application/libapplication.a
+
+build libcore.a: phony src/core/libcore.a
+
+build libglad.a: phony deps/glad/libglad.a
 
 build libglfw3.a: phony deps/glfw/src/libglfw3.a
 
@@ -709,7 +1027,14 @@ build update_mappings: phony deps/glfw/src/update_mappings
 #############################################
 # Folder: E:/open_gl_examples/cmake-build-debug
 
-build all: phony OpenGL.exe deps/glfw/all deps/glm/all
+build all: phony OpenGL.exe deps/glfw/all deps/glm/all deps/glad/all src/core/all src/application/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/open_gl_examples/cmake-build-debug/deps/glad
+
+build deps/glad/all: phony deps/glad/libglad.a
 
 # =============================================================================
 
@@ -740,20 +1065,34 @@ build deps/glm/all: phony deps/glm/glm/all
 build deps/glm/glm/all: phony
 
 # =============================================================================
+
+#############################################
+# Folder: E:/open_gl_examples/cmake-build-debug/src/application
+
+build src/application/all: phony src/application/libapplication.a
+
+# =============================================================================
+
+#############################################
+# Folder: E:/open_gl_examples/cmake-build-debug/src/core
+
+build src/core/all: phony src/core/libcore.a
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/open_gl_examples/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMake/cmake_uninstall.cmake.in E$:/open_gl_examples/deps/glfw/CMake/glfw3.pc.in E$:/open_gl_examples/deps/glfw/CMake/glfw3Config.cmake.in E$:/open_gl_examples/deps/glfw/src/CMakeLists.txt E$:/open_gl_examples/deps/glm/CMakeLists.txt E$:/open_gl_examples/deps/glm/glm/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/open_gl_examples/CMakeLists.txt E$:/open_gl_examples/deps/glad/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMake/cmake_uninstall.cmake.in E$:/open_gl_examples/deps/glfw/CMake/glfw3.pc.in E$:/open_gl_examples/deps/glfw/CMake/glfw3Config.cmake.in E$:/open_gl_examples/deps/glfw/src/CMakeLists.txt E$:/open_gl_examples/deps/glm/CMakeLists.txt E$:/open_gl_examples/deps/glm/glm/CMakeLists.txt E$:/open_gl_examples/src/application/CMakeLists.txt E$:/open_gl_examples/src/core/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/open_gl_examples/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMake/cmake_uninstall.cmake.in E$:/open_gl_examples/deps/glfw/CMake/glfw3.pc.in E$:/open_gl_examples/deps/glfw/CMake/glfw3Config.cmake.in E$:/open_gl_examples/deps/glfw/src/CMakeLists.txt E$:/open_gl_examples/deps/glm/CMakeLists.txt E$:/open_gl_examples/deps/glm/glm/CMakeLists.txt: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/open_gl_examples/CMakeLists.txt E$:/open_gl_examples/deps/glad/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMakeLists.txt E$:/open_gl_examples/deps/glfw/CMake/cmake_uninstall.cmake.in E$:/open_gl_examples/deps/glfw/CMake/glfw3.pc.in E$:/open_gl_examples/deps/glfw/CMake/glfw3Config.cmake.in E$:/open_gl_examples/deps/glfw/src/CMakeLists.txt E$:/open_gl_examples/deps/glm/CMakeLists.txt E$:/open_gl_examples/deps/glm/glm/CMakeLists.txt E$:/open_gl_examples/src/application/CMakeLists.txt E$:/open_gl_examples/src/core/CMakeLists.txt: phony
 
 
 #############################################
