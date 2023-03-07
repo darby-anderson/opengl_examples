@@ -41,17 +41,7 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-cmake-build-debug-visual-studio/
+cmake-build-*/
 
 # vscode 
 .vscode/
-
-# vcpkg
-vcpkg/
-vcpkg_installed/
-
-# submodule dependencies
-deps/glfw/
-deps/glm/
-deps/imgui/
-deps/stb/
