@@ -45,3 +45,6 @@ cmake-build-*/
 
 # vscode 
 .vscode/
+
+# IDE
+.idea/
