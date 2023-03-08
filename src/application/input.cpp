@@ -4,11 +4,13 @@
 
 #include <cstring>
 
+#include <GLFW/glfw3.h>
+
 #include "input.h"
 
-namespace penguin {
+namespace rockhopper {
 
-    void input::init() {
+    void input::init(Window* window) {
         memset(keys, 0, KEY_COUNT);
         memset(previous_keys, 0, KEY_COUNT);
     }
@@ -19,8 +21,21 @@ namespace penguin {
         }
     }
 
-    bool input::is_key_down(Key keys) {
+    // TODO!!! Get input callback finished
 
+    bool input::is_key_down(Key key) {
+        return keys[key] && has_focus();
     }
 
+    bool input::is_key_just_pressed(Key key) {
+        return keys[key] && !previous_keys[key] && has_focus();
+    }
+
+    bool input::is_key_just_released(Key key) {
+        return !keys[key] && previous_keys[key] && has_focus();
+    }
+
+    bool input::has_focus() {
+        glfwGetWindowAttrib(window->windowHandle, GLFW_FOCUSED);
+    }
 }
