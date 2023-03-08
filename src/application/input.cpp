@@ -9,13 +9,14 @@
 namespace penguin {
 
     void input::init() {
-
         memset(keys, 0, KEY_COUNT);
         memset(previous_keys, 0, KEY_COUNT);
+    }
 
-        // START HERE
-
-
+    void input::new_frame() {
+        for(u32 i = 0; i < KEY_COUNT; i++) {
+            previous_keys[i] = keys[i];
+        }
     }
 
     bool input::is_key_down(Key keys) {
