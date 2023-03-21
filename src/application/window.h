@@ -6,7 +6,12 @@
 
 #include <iostream>
 
+#ifndef GLAD_AND_GLFW
+#define GLAD_AND_GLFW
+#include <glad/gl.h>
 #include <GLFW/glfw3.h>
+#endif
+
 
 #include "platform.h"
 
@@ -35,7 +40,7 @@ public:
 
     void update();
 
-    GLFWwindow* windowHandle;
+    GLFWwindow* glfwWindow;
 
     int width;
     int height;

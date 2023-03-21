@@ -18,17 +18,26 @@ namespace rockhopper {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        windowHandle =  glfwCreateWindow(800, 600, "OpenGL Examples", nullptr, nullptr);
+        glfwWindow =  glfwCreateWindow(800, 600, "OpenGL Examples", nullptr, nullptr);
 
-        if(windowHandle == nullptr) {
+        if(glfwWindow == nullptr) {
             cstring err = "Failed to create OpenGL context";
+            std::cout << err << std::endl;
+            glfwTerminate();
+            throw std::runtime_error(err);
+        }
+        glfwMakeContextCurrent(glfwWindow);
+
+        int version = gladLoadGL(glfwGetProcAddress);
+        if(version == 0) {
+            cstring err = "Failed to initialize OpenGL context";
             std::cout << err << std::endl;
             glfwTerminate();
             throw std::runtime_error(err);
         }
 
         glViewport(0, 0, config->width, config->height);
-        glfwSetFramebufferSizeCallback(windowHandle, config->framebuffer_size_callback);
+        glfwSetFramebufferSizeCallback(glfwWindow, config->framebuffer_size_callback);
 
     }
 
@@ -41,7 +50,7 @@ namespace rockhopper {
     }
 
     bool Window::shouldClose() {
-        return glfwWindowShouldClose(windowHandle) || shouldCloseSet;
+        return glfwWindowShouldClose(glfwWindow) || shouldCloseSet;
     }
 
     void Window::update() {

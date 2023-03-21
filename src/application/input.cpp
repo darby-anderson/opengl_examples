@@ -4,12 +4,9 @@
 
 #include <cstring>
 
-#include <GLFW/glfw3.h>
-
 #include "input.h"
 
 namespace rockhopper {
-
 
     void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
         input* inputHandle = static_cast<input*>(glfwGetWindowUserPointer(window));
@@ -22,7 +19,8 @@ namespace rockhopper {
     void input::init(Window* window) {
         this->window = window;
 
-        glfwSetWindowUserPointer(this->window->windowHandle, reinterpret_cast<void*>(this));
+        glfwSetWindowUserPointer(this->window->glfwWindow, reinterpret_cast<void*>(this));
+        glfwSetKeyCallback(this->window->glfwWindow, keyCallback);
 
         memset(keys, 0, KEY_COUNT);
         memset(previous_keys, 0, KEY_COUNT);
@@ -47,6 +45,6 @@ namespace rockhopper {
     }
 
     bool input::has_focus() {
-        glfwGetWindowAttrib(window->windowHandle, GLFW_FOCUSED);
+        return glfwGetWindowAttrib(window->glfwWindow, GLFW_FOCUSED);
     }
 }
