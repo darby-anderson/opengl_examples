@@ -28,7 +28,8 @@ public:
 private:
     bool    has_focus();
 
-    Window* window;
+
+        Window* window;
 
 };
 
