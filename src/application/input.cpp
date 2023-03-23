@@ -13,6 +13,10 @@ namespace rockhopper {
 
         if(action == GLFW_PRESS) {
             inputHandle->keys[key] = 1;
+            inputHandle->first_frame_keys[key] = 1;
+        } else if(action == GLFW_RELEASE) {
+            inputHandle->keys[key] = 0;
+            inputHandle->released_keys[key] = 1;
         }
     }
 
@@ -23,12 +27,14 @@ namespace rockhopper {
         glfwSetKeyCallback(this->window->glfwWindow, keyCallback);
 
         memset(keys, 0, KEY_COUNT);
-        memset(previous_keys, 0, KEY_COUNT);
+        memset(first_frame_keys, 0, KEY_COUNT);
+        memset(released_keys, 0, KEY_COUNT);
     }
 
-    void input::new_frame() {
+    void input::start_new_frame() {
         for(u32 i = 0; i < KEY_COUNT; i++) {
-            previous_keys[i] = keys[i];
+            released_keys[i] = 0;
+            first_frame_keys[i] = 0;
         }
     }
 
@@ -37,11 +43,11 @@ namespace rockhopper {
     }
 
     bool input::is_key_just_pressed(Key key) {
-        return keys[key] && !previous_keys[key] && has_focus();
+        return first_frame_keys[key] && has_focus();
     }
 
     bool input::is_key_just_released(Key key) {
-        return !keys[key] && previous_keys[key] && has_focus();
+        return released_keys[key] && has_focus();
     }
 
     bool input::has_focus() {

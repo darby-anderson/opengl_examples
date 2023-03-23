@@ -28,7 +28,7 @@ namespace rockhopper {
         }
         glfwMakeContextCurrent(glfwWindow);
 
-        int version = gladLoadGL(glfwGetProcAddress);
+        int version = gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
         if(version == 0) {
             cstring err = "Failed to initialize OpenGL context";
             std::cout << err << std::endl;

@@ -8,7 +8,7 @@
 
 #ifndef GLAD_AND_GLFW
 #define GLAD_AND_GLFW
-#include <glad/gl.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #endif
 
