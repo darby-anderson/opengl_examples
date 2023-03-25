@@ -52,6 +52,10 @@ add_subdirectory(src/core)
 target_link_libraries(${PROJECT_NAME} core)
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src/core")
 
+add_subdirectory(src/graphics)
+target_link_libraries(${PROJECT_NAME} graphics)
+target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src/graphics")
+
 add_subdirectory(src/application)
 target_link_libraries(${PROJECT_NAME} application)
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src/application")

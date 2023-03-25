@@ -6,6 +6,8 @@
 
 #include "platform.h"
 
+#include <cstdio>
+
 namespace rockhopper {
 
     struct FileReadResult {

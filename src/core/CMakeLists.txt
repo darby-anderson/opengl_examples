@@ -5,4 +5,6 @@ add_library(
         "platform.h"
         "file_system.h"
         "file_system.cpp"
+        "memory.h"
+        "memory.cpp"
 )

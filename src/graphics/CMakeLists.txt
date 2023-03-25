@@ -5,3 +5,5 @@ add_library(
         "shader.h"
         "shader.cpp"
 )
+
+target_link_libraries(graphics glad)
