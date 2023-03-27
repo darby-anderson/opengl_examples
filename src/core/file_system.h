@@ -5,6 +5,7 @@
 #pragma once
 
 #include "platform.h"
+#include "memory.h"
 
 #include <cstdio>
 
@@ -16,6 +17,6 @@ namespace rockhopper {
     };
 
 
-    FileReadResult          file_read_text(cstring filename);
+    FileReadResult          file_read_text(cstring filename, Allocator* allocator);
 
 }

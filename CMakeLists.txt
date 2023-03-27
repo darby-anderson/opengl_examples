@@ -43,6 +43,10 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/deps/stb
 add_subdirectory(deps/glad)
 target_link_libraries(${PROJECT_NAME} glad)
 
+# TLSF
+add_subdirectory(deps/tlsf)
+target_link_libraries(${PROJECT_NAME} tlsf)
+
 # OpenGL
 find_package(OpenGL REQUIRED)
 target_link_libraries(${PROJECT_NAME} opengl32)
