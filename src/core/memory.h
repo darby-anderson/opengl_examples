@@ -109,6 +109,13 @@ namespace rockhopper {
         void test();
     };
 
-    #define ralloca(size, allocator) ((allocator)->allocate(size, 1, __FILE__, __LINE__))
+    #define rock_alloc(size, allocator)                     ((allocator)->allocate(size, 1, __FILE__, __LINE__))
+    #define rock_alloc_aligned(size, allocator, alignment)  ((allocator)->allocate(size, alignment, __FILE__, __LINE__));
+
+    #define rock_free(pointer, allocator)                   (allocator)->deallocate(pointer)
+
+    #define rock_kilo(size)                                 (size * 1024);
+    #define rock_mega(size)                                 (size * 1024 * 1024);
+    #define rock_giga(size)                                 (size * 1024 * 1024 * 1024);
 
 }

@@ -13,6 +13,14 @@
 
 namespace rockhopper {
 
+    // Memory Service /////////////////////////////////////////////
+    static MemoryService    s_memory_service;
+    MemoryService* MemoryService::instance() {
+        return &s_memory_service;
+    }
+
+    static size_t s_size =  rock_mega(32) + tlsf_size() + 8;
+
     // Memory Walkers for TLSF
     static void exit_walker(void* ptr, size_t size, int used, void* usr) {
         MemoryStatistics* stats = (MemoryStatistics*)usr;
@@ -217,7 +225,4 @@ namespace rockhopper {
     void StackAllocator::clear() {
         allocated_size = 0;
     }
-
-
-
 }
