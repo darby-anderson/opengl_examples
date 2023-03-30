@@ -4,10 +4,15 @@
 
 #include "shader.h"
 
+#include "file_system.h"
+
 namespace rockhopper {
 
-    void shader::init(const char* vertexPath, const char* fragmentPath) {
+    void shader::init(cstring vertexPath, cstring fragmentPath) {
         // 1. retrieve the vertex/fragment source code from file path
+        rockhopper::file_read_text(vertexPath);
+        rockhopper::file_read_text(fragmentPath);
+
         std::string vertexCode;
         std::string fragmentCode;
 

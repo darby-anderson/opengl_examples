@@ -15,19 +15,27 @@ namespace rockhopper {
         return fileSizeSigned;
     }
 
-    FileReadResult file_read_text(cstring filename) {
+    FileReadResult file_read_text(cstring filename, Allocator* allocator) {
         FileReadResult result {nullptr, 0};
 
         FILE* file = fopen(filename, "r");
 
         if(file) {
             size_t filesize = file_get_size(file);
-            result.data = (char*)
+            result.data = (char*) rock_alloc(filesize + 1, allocator);
 
+            // Correct: use elementcount as filesize, bytes_read becomes the actual bytes read
+            // AFTER the end of line conversion for windows (it uses \r\n)
 
+            size_t bytes_read = fread(result.data, 1, filesize, file);
+
+            result.data[bytes_read] = 0;
+            result.size = filesize;
+
+            fclose(file);
         }
 
-
+        return result;
     }
 
 }
