@@ -77,8 +77,8 @@ namespace rockhopper {
         void                init(size_t size);
         void                shutdown();
 
-        void*               allocate(size_t size, size_t alignment) override;
-        void*               allocate(size_t size, size_t alignment, cstring file, i32 line) override;
+        void*               allocate(const size_t size, size_t alignment) override;
+        void*               allocate(const size_t size, size_t alignment, cstring file, i32 line) override;
 
         void                deallocate(void* pointer) override;
 
@@ -96,6 +96,8 @@ namespace rockhopper {
 
     struct MemoryService : public Service {
 
+        ROCKHOPPER_DECLARE_SERVICE( MemoryService );
+
         void init(void* configuration);
         void shutdown();
 
@@ -110,12 +112,12 @@ namespace rockhopper {
     };
 
     #define rock_alloc(size, allocator)                     ((allocator)->allocate(size, 1, __FILE__, __LINE__))
-    #define rock_alloc_aligned(size, allocator, alignment)  ((allocator)->allocate(size, alignment, __FILE__, __LINE__));
+    #define rock_alloc_aligned(size, allocator, alignment)  ((allocator)->allocate(size, alignment, __FILE__, __LINE__))
 
     #define rock_free(pointer, allocator)                   (allocator)->deallocate(pointer)
 
-    #define rock_kilo(size)                                 (size * 1024);
-    #define rock_mega(size)                                 (size * 1024 * 1024);
-    #define rock_giga(size)                                 (size * 1024 * 1024 * 1024);
+    #define rock_kilo(size)                                 (size * 1024)
+    #define rock_mega(size)                                 (size * 1024 * 1024)
+    #define rock_giga(size)                                 (size * 1024 * 1024 * 1024)
 
 }

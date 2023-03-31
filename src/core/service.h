@@ -11,4 +11,6 @@ namespace rockhopper {
         virtual void        shutdown();
     };
 
+    #define ROCKHOPPER_DECLARE_SERVICE(Type)    static Type* instance();
+
 }

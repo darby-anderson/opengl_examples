@@ -9,11 +9,21 @@
 namespace rockhopper {
 
     void shader::init(cstring vertexPath, cstring fragmentPath) {
-        // 1. retrieve the vertex/fragment source code from file path
-        rockhopper::file_read_text(vertexPath);
-        rockhopper::file_read_text(fragmentPath);
 
-        std::string vertexCode;
+
+        // 1. retrieve the vertex/fragment source code from file path
+        FileReadResult vertexReadResult = file_read_text(vertexPath, &MemoryService::instance()->scratch_allocator);
+        if(vertexReadResult.size == 0) {
+            std::string err = "Error reading from vertex shader at: " + vertexPath;
+            throw std::runtime_error("error reading from vertex shader at: " + fragmentPath);
+        }
+
+        FileReadResult fragmentReadResult = rockhopper::file_read_text(fragmentPath, &MemoryService::instance()->scratch_allocator);
+        if(fragmentReadResult.size == 0) {
+            throw std::runtime_error("error reading from fragment shader at: " + fragmentPath);
+        }
+
+        /*std::string vertexCode;
         std::string fragmentCode;
 
         std::ifstream vShaderFile;
@@ -42,7 +52,7 @@ namespace rockhopper {
         }
 
         const char* vShaderCode = vertexCode.c_str();
-        const char* fShaderCode = fragmentCode.c_str();
+        const char* fShaderCode = fragmentCode.c_str();*/
 
         // 2. compile shaders
         u32 vertex, fragment;

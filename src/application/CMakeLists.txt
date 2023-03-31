@@ -12,5 +12,8 @@ add_library(
 target_link_libraries(application core)
 target_include_directories(application PUBLIC "${PROJECT_SOURCE_DIR}/src/core")
 
+target_link_libraries(application graphics)
+target_include_directories(application PUBLIC "${PROJECT_SOURCE_DIR}/src/graphics")
+
 target_link_libraries(application glfw)
 target_link_libraries(application glad)
