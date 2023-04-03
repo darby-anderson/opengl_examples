@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
-project(OpenGL)
+project(OpenGLExamples)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/graphics/shader.cpp src/graphics/shader.h)
+add_executable(${PROJECT_NAME} src/main.cpp)
 
 # dependencies
 

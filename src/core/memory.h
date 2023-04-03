@@ -98,13 +98,11 @@ namespace rockhopper {
 
         ROCKHOPPER_DECLARE_SERVICE( MemoryService );
 
-        void init(void* configuration);
-        void shutdown();
+        void init(void* configuration) override;
+        void shutdown() override;
 
         void imgui_draw();
 
-        // Frame Allocator
-        LinearAllocator scratch_allocator;
         // System Allocator
         HeapAllocator system_allocator;
 

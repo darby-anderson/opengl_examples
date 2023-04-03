@@ -10,29 +10,28 @@ namespace rockhopper {
 
     void shader::init(cstring vertexPath, cstring fragmentPath) {
 
+        Allocator* systemAllocator = &MemoryService::instance()->system_allocator;
 
         // 1. retrieve the vertex/fragment source code from file path
-        FileReadResult vertexReadResult = file_read_text(vertexPath, &MemoryService::instance()->scratch_allocator);
+        FileReadResult vertexReadResult = file_read_text(vertexPath, systemAllocator);
         if(vertexReadResult.size == 0) {
-            std::string err = "Error reading from vertex shader at: " + vertexPath;
-            throw std::runtime_error("error reading from vertex shader at: " + fragmentPath);
+            std::string err = std::string("Error reading from vertex shader at: ") + vertexPath;
+            throw std::runtime_error(err);
         }
 
-        FileReadResult fragmentReadResult = rockhopper::file_read_text(fragmentPath, &MemoryService::instance()->scratch_allocator);
+        FileReadResult fragmentReadResult = rockhopper::file_read_text(fragmentPath, systemAllocator);
         if(fragmentReadResult.size == 0) {
-            throw std::runtime_error("error reading from fragment shader at: " + fragmentPath);
+            std::string err = std::string("Error reading from fragment shader at: ") + fragmentPath;
+            throw std::runtime_error(err);
         }
 
         /*std::string vertexCode;
         std::string fragmentCode;
-
         std::ifstream vShaderFile;
         std::ifstream fShaderFile;
-
         // ensure ifstream objects throw exceptions
         vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
         try {
             // open files
             vShaderFile.open(vertexPath);
@@ -50,7 +49,6 @@ namespace rockhopper {
         } catch(std::ifstream::failure e) {
             std::cout << "ERROR::SHADER::FILE NOT SUCCESSFULLY READ" << std::endl;
         }
-
         const char* vShaderCode = vertexCode.c_str();
         const char* fShaderCode = fragmentCode.c_str();*/
 
@@ -61,7 +59,7 @@ namespace rockhopper {
 
         // vertex shader
         vertex = glCreateShader(GL_VERTEX_SHADER);
-        glShaderSource(vertex, 1, &vShaderCode, NULL);
+        glShaderSource(vertex, 1, &vertexReadResult.data, NULL);
         glCompileShader(vertex);
 
         // print compile errors if any
@@ -73,7 +71,7 @@ namespace rockhopper {
 
         // fragment shader
         fragment = glCreateShader(GL_FRAGMENT_SHADER);
-        glShaderSource(fragment, 1, &fShaderCode, NULL);
+        glShaderSource(fragment, 1, &fragmentReadResult.data, NULL);
         glCompileShader(fragment);
 
         // print compile errors if any
@@ -99,6 +97,9 @@ namespace rockhopper {
         // delete the shaders as they're linked into our program now and are no longer needed
         glDeleteShader(vertex);
         glDeleteShader(fragment);
+
+        systemAllocator->deallocate(vertexReadResult.data);
+        systemAllocator->deallocate(fragmentReadResult.data);
     }
 
     void shader::use() {
