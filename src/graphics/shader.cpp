@@ -66,7 +66,7 @@ namespace rockhopper {
         glGetShaderiv(vertex, GL_COMPILE_STATUS, &success);
         if(!success) {
             glGetShaderInfoLog(vertex, 512, NULL, infoLog);
-            std::cout << "ERROR::SHADER::VERTEX::COMPILATION FAILED" << std::endl << infoLog << std::endl;
+            std::cout << "ERROR::SHADER::VERTEX::COMPILATION FAILED (" + std::string(vertexPath) + ")" << std::endl << infoLog << std::endl;
         }
 
         // fragment shader
@@ -78,7 +78,7 @@ namespace rockhopper {
         glGetShaderiv(fragment, GL_COMPILE_STATUS, &success);
         if(!success) {
             glGetShaderInfoLog(fragment, 512, NULL, infoLog);
-            std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION FAILED" << std::endl << infoLog << std::endl;
+            std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION FAILED (" + std::string(fragmentPath) + ")" << std::endl << infoLog << std::endl;
         }
 
         // Shader program
@@ -116,6 +116,19 @@ namespace rockhopper {
 
     void shader::setFloat(const std::string& name, float value) const {
         glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
+    }
+
+    void shader::setFloatMatrix4(const std::string &name, glm::mat4 value) const {
+        // (GLint location, Glsizei count, Glboolean transpose, const GLfloat* value)
+        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+    }
+
+    void shader::setFloatVec3(const std::string &name, float x, float y, float z) const {
+        glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
+    }
+
+    void shader::setFloatVec3(const std::string& name, glm::vec3 value) const {
+        glUniform3f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z);
     }
 
 }

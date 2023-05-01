@@ -56,7 +56,5 @@ namespace rockhopper {
     void Window::update() {
 
     }
-
-
 }
 

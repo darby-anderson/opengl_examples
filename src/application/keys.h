@@ -8,7 +8,7 @@ namespace rockhopper {
 
     // THESE KEYS MATCH GLFW
     enum Key {
-        KEY_SPACE = 32,
+        KEY_SPACE   = 32,
 
         KEY_0       = 48,
         KEY_1       = 49,

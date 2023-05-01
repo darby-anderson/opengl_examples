@@ -7,6 +7,7 @@ add_library(
         "keys.h"
         "input.h"
         "input.cpp"
+        "camera.h"
 )
 
 target_link_libraries(application core)

@@ -23,10 +23,7 @@ struct WindowConfiguration {
 
     cstring name = nullptr;
 
-    GLFWframebuffersizefun framebuffer_size_callback;
-    // void(*framebuffer_size_callback_2) (GLFWwindow*, int, int);
-
-    void process_input(GLFWwindow* window);
+    GLFWframebuffersizefun framebuffer_size_callback = nullptr;
 };
 
 struct Window {
@@ -40,10 +37,10 @@ public:
 
     void update();
 
-    GLFWwindow* glfwWindow;
+    GLFWwindow* glfwWindow = nullptr;
 
-    int width;
-    int height;
+    int width = 0;
+    int height = 0;
 
 private:
     bool shouldCloseSet = false;
