@@ -8,6 +8,8 @@ add_library(
         "input.h"
         "input.cpp"
         "camera.h"
+        "scenes.hpp"
+        "scenes.cpp"
 )
 
 target_link_libraries(application core)

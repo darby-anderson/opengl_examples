@@ -72,7 +72,7 @@ public:
         return glm::lookAt(position, position + front, up);
     }
 
-    void processInput(input* in, float deltaTime) {
+    void processInput(Input* in, float deltaTime) {
 
         // return;
 

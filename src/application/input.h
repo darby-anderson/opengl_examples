@@ -29,7 +29,7 @@ namespace rockhopper {
         Window* window = nullptr;
     };
 
-struct input {
+struct Input {
 
 public:
 

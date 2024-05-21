@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.2...3.20)
+# cmake_policy(VERSION 3.20)
+
 project(OpenGLExamples)
 
 # specify the C++ standard
@@ -17,6 +19,10 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(deps/glfw)
 target_link_libraries(${PROJECT_NAME} glfw)
+
+# ASSIMP - linking built VS dll
+add_subdirectory(deps/assimp)
+target_link_libraries(${PROJECT_NAME} assimp)
 
 # GLM - https://github.com/g-truc/glm/blob/master/manual.md#-15-finding-glm-with-cmake
 add_subdirectory(deps/glm)

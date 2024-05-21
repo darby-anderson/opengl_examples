@@ -9,17 +9,17 @@
 namespace rockhopper {
 
     void scrollCallback(GLFWwindow* window, double xOffset, double yOffset) {
-        auto inputHandle = static_cast<input*>(glfwGetWindowUserPointer(window));
+        auto inputHandle = static_cast<Input*>(glfwGetWindowUserPointer(window));
         inputHandle->on_scroll((f32)xOffset, (f32)yOffset);
     }
 
     void mouseCallback(GLFWwindow* window, double xPos, double yPos) {
-        auto inputHandle = static_cast<input*>(glfwGetWindowUserPointer(window));
+        auto inputHandle = static_cast<Input*>(glfwGetWindowUserPointer(window));
         inputHandle->on_mouse_move((f32)xPos, (f32)yPos);
     }
 
     void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-        auto inputHandle = static_cast<input*>(glfwGetWindowUserPointer(window));
+        auto inputHandle = static_cast<Input*>(glfwGetWindowUserPointer(window));
 
         if(action == GLFW_PRESS) {
             inputHandle->mouse_buttons[button] = 1;
@@ -31,7 +31,7 @@ namespace rockhopper {
     }
 
     void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-        auto inputHandle = static_cast<input*>(glfwGetWindowUserPointer(window));
+        auto inputHandle = static_cast<Input*>(glfwGetWindowUserPointer(window));
 
         if(action == GLFW_PRESS) {
             inputHandle->keys[key] = 1;
@@ -42,7 +42,7 @@ namespace rockhopper {
         }
     }
 
-    void input::init(InputConfiguration* input_configuration) {
+    void Input::init(InputConfiguration* input_configuration) {
         this->window = input_configuration->window;
 
         glfwSetInputMode(this->window->glfwWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
@@ -62,7 +62,7 @@ namespace rockhopper {
         memset(released_mouse_buttons, 0, MOUSE_BUTTON_COUNT);
     }
 
-    void input::start_new_frame() {
+    void Input::start_new_frame() {
         for(u32 i = 0; i < KEY_COUNT; i++) {
             released_keys[i] = 0;
             first_frame_keys[i] = 0;
@@ -77,18 +77,18 @@ namespace rockhopper {
         scroll_data.has_scrolled = false;
     }
 
-    void input::on_scroll(f32 x_offset, f32 y_offset) {
+    void Input::on_scroll(f32 x_offset, f32 y_offset) {
         scroll_data.has_scrolled = true;
 
         scroll_data.x_offset = x_offset;
         scroll_data.y_offset = y_offset;
     }
 
-    ScrollData input::get_scroll_info_this_frame() {
+    ScrollData Input::get_scroll_info_this_frame() {
         return scroll_data;
     }
 
-    void input::on_mouse_move(f32 new_position_x, f32 new_position_y) {
+    void Input::on_mouse_move(f32 new_position_x, f32 new_position_y) {
         mouse_move_data.has_moved = true;
 
         if(!has_ever_received_mouse_data) {
@@ -105,35 +105,35 @@ namespace rockhopper {
         mouse_move_data.y_position = new_position_y;
     }
 
-    MouseMoveData input::get_mouse_move_info_this_frame() {
+    MouseMoveData Input::get_mouse_move_info_this_frame() {
         return mouse_move_data;
     }
 
-    bool input::is_key_down(Key key) {
+    bool Input::is_key_down(Key key) {
         return keys[key] && has_focus();
     }
 
-    bool input::is_key_just_pressed(Key key) {
+    bool Input::is_key_just_pressed(Key key) {
         return first_frame_keys[key] && has_focus();
     }
 
-    bool input::is_key_just_released(Key key) {
+    bool Input::is_key_just_released(Key key) {
         return released_keys[key] && has_focus();
     }
 
-    bool input::is_mouse_button_down(MouseButton button) {
+    bool Input::is_mouse_button_down(MouseButton button) {
         return mouse_buttons[button] && has_focus();
     }
 
-    bool input::is_mouse_button_just_pressed(MouseButton button) {
+    bool Input::is_mouse_button_just_pressed(MouseButton button) {
         return first_frame_mouse_buttons[button] && has_focus();
     }
 
-    bool input::is_mouse_button_just_released(MouseButton button) {
+    bool Input::is_mouse_button_just_released(MouseButton button) {
         return released_mouse_buttons[button] && has_focus();
     }
 
-    bool input::has_focus() {
+    bool Input::has_focus() {
         return glfwGetWindowAttrib(window->glfwWindow, GLFW_FOCUSED);
     }
 }
